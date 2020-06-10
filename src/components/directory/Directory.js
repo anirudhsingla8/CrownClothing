@@ -9,33 +9,33 @@ class Directory extends Component{
                 title:'HATS',
                 id:1,
                 linkURL:'hats',
-                imageURL:'https://i.ibb.co/cvpntL1/hats.png'
+                imageUrl:'https://i.ibb.co/cvpntL1/hats.png'
             },
             {
                 title:'JACKETS',
                 id:2,
-                linkURL:'',
-                imageURL:'https://i.ibb.co/px2tCc3/jackets.png'
+                linkURL:'jackets',
+                imageUrl:'https://i.ibb.co/px2tCc3/jackets.png'
             },
             {
                 title:'SNEAKERS',
                 id:3,
-                linkURL:'',
-                imageURL:'https://i.ibb.co/0jqHpnp/sneakers.png'
+                linkURL:'sneakers',
+                imageUrl:'https://i.ibb.co/0jqHpnp/sneakers.png'
             },
             {
                 title:'WOMENS',
                 id:4,
                 size:'large',
-                linkURL:'',
-                imageURL:'https://i.ibb.co/GCCdy8t/womens.png'
+                linkURL:'womens',
+                imageUrl:'https://i.ibb.co/GCCdy8t/womens.png'
             },
             {
                 title:'MENS',
                 id:5,
                 size:'large',
-                linkURL:'',
-                imageURL:'https://i.ibb.co/R70vBrQ/men.png'
+                linkURL:'mens',
+                imageUrl:'https://i.ibb.co/R70vBrQ/men.png'
             }
         ]
     }
@@ -50,7 +50,7 @@ class Directory extends Component{
                             size={section.size}
                             key={section.id}
                             title={section.title}
-                            imageURL={section.imageURL}
+                            imageUrl={section.imageUrl}
                             linkURL={section.linkURL}
                         />
                     )

@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import {Switch, Route, Link} from 'react-router-dom';
 import HomePage from "./pages/homepage/HomePage";
+import ShopPage from "./pages/shop_page/ShopPage";
+import Header from "./components/header/Header";
 
 const HatsPage = (props) => {
     return(
@@ -43,9 +45,11 @@ const HatsPageID = (props) => {
 function App() {
   return (
     <div>
+        <Header/>
         <Switch>
             <Route exact path='/' component={HomePage}/>
             <Route exact path='/hats' component={HatsPageList}/>
+            <Route exact path='/shop' component={ShopPage}/>
             <Route path='/hats/:id' component={HatsPageID}/>
         </Switch>
     </div>
