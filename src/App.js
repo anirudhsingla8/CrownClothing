@@ -5,7 +5,7 @@ import HomePage from "./pages/homepage/HomePage";
 import ShopPage from "./pages/shop_page/ShopPage";
 import Header from "./components/header/Header";
 import SignInSignUpPage from "./pages/sign_in_sign_up_page/SignInSignUpPage";
-import {auth} from "./firebase/firebase";
+import {auth, createUserProfileDocument} from "./firebase/firebase";
 
 const HatsPage = (props) => {
     return(
@@ -49,10 +49,10 @@ class App extends Component{
         currentUser:null
     }
 
-    unsubscribeFromAuth = null;
+    unSubscribeFromAuth = null;
 
     componentDidMount() {
-        this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
+        this.unSubscribeFromAuth = auth.onAuthStateChanged(user => {
             this.setState({
                 currentUser: user
             });
@@ -61,7 +61,7 @@ class App extends Component{
     }
 
     componentWillUnmount() {
-        this.unsubscribeFromAuth();
+        this.unSubscribeFromAuth();
     }
 
     render() {

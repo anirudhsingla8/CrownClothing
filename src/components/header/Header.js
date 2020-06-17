@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import {ReactComponent as Logo} from "../../assets/crown.svg";
 import {auth} from "../../firebase/firebase";
 
-const Header = (props) => {
+const Header = props => {
     const {currentUser} = props;
     return(
         <div className='header'>
@@ -20,8 +20,12 @@ const Header = (props) => {
                 </Link>
                 {
                     currentUser ?
-                        <div className='option' onClick={auth.signOut()}>SIGN OUT</div> :
-                        <Link className='option' to='/signIn'>SIGN IN</Link>
+                        <div className='option' onClick={() => auth.signOut()}>
+                            SIGN OUT
+                        </div> :
+                        <Link className='option' to='/signIn'>
+                            SIGN IN
+                        </Link>
                 }
             </div>
         </div>
