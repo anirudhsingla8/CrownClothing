@@ -29,7 +29,7 @@ class SignIn extends Component{
     render() {
         const {email,password} = this.state;
         return(
-            <div className='sign-in'>
+            <div className='sign-up'>
                 <h2 className='title'>I already have an account</h2>
                 <span className='title'>SignIn with you email and password</span>
 
