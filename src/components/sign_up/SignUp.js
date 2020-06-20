@@ -2,7 +2,7 @@ import React,{Component} from "react";
 import './signUp.scss';
 import FormInput from "../form_input/FormInput";
 import CustomButton from "../custom_botton/CustomButton";
-import {auth, createUserProfileDocument, signInWithGoogle} from "../../firebase/firebase";
+import {auth, createUserProfileDocument} from "../../firebase/firebase";
 
 
 class SignUp extends Component{
@@ -73,7 +73,7 @@ class SignUp extends Component{
                         required/>
                     <FormInput
                         name='confirmPassword'
-                        type='confirmPassword'
+                        type='password'
                         value={confirmPassword}
                         label='Confirm Password'
                         handleChange={this.handleChange}

@@ -7,17 +7,6 @@ import Header from "./components/header/Header";
 import SignInSignUpPage from "./pages/sign_in_sign_up_page/SignInSignUpPage";
 import {auth, createUserProfileDocument} from "./firebase/firebase";
 
-const HatsPage = (props) => {
-    return(
-         <div>
-            <h1>
-                <button onClick={() => props.history.push('/hats')}/>
-                HATS PAGE
-            </h1>
-        </div>
-    )
-}
-
 const HatsPageList = (props) => {
     console.log(props.match.url)
     return(

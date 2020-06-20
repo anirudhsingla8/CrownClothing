@@ -2,7 +2,7 @@ import React from "react";
 import './collectionItem.scss';
 
 const CollectionItem = (props) => {
-    const {id, imageUrl, price, name} = props;
+    const {imageUrl, price, name} = props;
     return(
         <div className='collection-item'>
             <div className='image'
